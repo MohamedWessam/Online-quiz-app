@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="controller"
+            type="com.wessam.quizapp.ui.main.fragments.CategoryFragment" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        tools:context=".ui.main.fragments.CategoryFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/no_internet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.cunoraz.gifview.library.GifView
+                android:id="@+id/no_internet_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:fontFamily="@font/cairo_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/failed_to_connect"
+                android:textColor="@color/colorText"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:id="@+id/Title2"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/check_network"
+                android:textColor="@color/darkGray"
+                android:fontFamily="@font/cairo_regular"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reconnect_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_22sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:paddingEnd="@dimen/_22sdp"
+                    android:onClick="@{() -> controller.checkNetwork()}"
+                    android:text="@string/try_again"
+                    android:background="@drawable/border_green_transparent"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/buttons_bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categories_recycler_view"
+            android:layout_width="match_parent"
+            android:padding="@dimen/_4sdp"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="controller"
+            type="com.wessam.quizapp.ui.main.fragments.TrackingFragment" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        tools:context=".ui.main.fragments.TrackingFragment">
+
+        <RelativeLayout
+            android:id="@+id/no_user_layout"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:fontFamily="@font/cairo_regular"
+                android:text="@string/login_to_save"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/go_to_login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view"
+                android:onClick="@{() -> controller.navigateToLoginActivity()}"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:background="@drawable/border_green"
+                android:fontFamily="@font/buttons_bold"
+                android:padding="@dimen/_14sdp"
+                android:text="@string/login"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorText" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/score_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_4sdp" />
+
+    </FrameLayout>
+</layout>

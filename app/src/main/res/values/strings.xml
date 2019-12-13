@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">اختبر معلوماتك</string>
+    <string name="categories">الأقسام</string>
+    <string name="ranking">تقييم</string>
+    <string name="next">التالي</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="password">كلمة السر</string>
+    <string name="not_have_account"><u>ليس لديك حساب؟ سجل الآن!</u></string>
+    <string name="have_account"><u>لديك حساب؟ سجل الدخول!</u></string>
+    <string name="cancel_login"><u>تخطي التسجيل</u></string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="confirm_password">تأكيد كلمة السر</string>
+    <string name="required">هذا الحقل مطلوب</string>
+    <string name="error">حدث خطأ! حاول مرة أخرى</string>
+    <string name="not_match">كلمة المرور غير متطابقة</string>
+    <string name="login_to_save">قم بتسجيل الدخول أو إنشاء حساب حتى تتمكن من تتبع تطورك</string>
+    <string name="retry">حاول مرة أخرى</string>
+    <string name="finish">إنهاء</string>
+    <string name="your_result">لقد حصلت على</string>
+    <string name="highest_score">أعلى درجة</string>
+    <string name="failed_to_connect">فشل الاتصال بالانترنت</string>
+    <string name="check_network">من فضلك تحقق من الاتصال بالانترنت</string>
+    <string name="try_again">أعد المحاولة</string>
+</resources>
